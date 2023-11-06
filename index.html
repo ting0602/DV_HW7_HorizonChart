@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Horizon Chart</title>
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="selectors">
+            <div>
+                <h3>Pollutants:</h3>
+                <div>
+                    <input type="checkbox" id="SO2" value="SO2" checked>
+                    <label for="SO2">SO2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="NO2" value="NO2" checked>
+                    <label for="NO2">NO2</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="O3" value="O3" checked>
+                    <label for="O3">O3</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="CO" value="CO" checked>
+                    <label for="CO">CO</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="PM10" value="PM10" checked>
+                    <label for="PM10">PM10</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="PM2.5" value="PM2.5" checked>
+                    <label for="PM2.5">PM2.5</label>
+                </div>
+                <br/>
+            </div>
+            <div>
+                <h3>Time Order:</h3>
+                <select id="sort-order-selector">
+                    <option value="ascending" selected>Ascending</option>
+                    <option value="descending">Descending</option>
+                </select>
+            </div>
+            <div>
+                <h3>Target Year:</h3>
+                <select id="year-selector">
+                    <option value="2017">2017</option>
+                    <option value="2018">2018</option>
+                    <option value="2019" selected>2019</option>
+                </select>
+            </div>
+            <div id="bandSelector">
+                <h3>Number of bands:</h3>
+                <input id="bands" name="bands" type="range" min="1" max="5" value="5" step="1">
+                <span id="bands-value"></span>
+            </div>
+        </div>
+        <div style="margin-top: 250px;"></div>
+        <div id="tooltip"></div>
+        <script src="script.js"></script>
+    </body>
+</html>
